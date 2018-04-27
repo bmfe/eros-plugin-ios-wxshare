@@ -10,7 +10,7 @@
 #import "YYModel.h"
 #import <UMShare/UMShare.h>
 #import <UMCommon/UMConfigure.h>
-#import <WeexPluginLoader/WeexPluginLoader.h>
+#import <WeexPluginLoader/WeexPluginLoader/WeexPluginLoader.h>
 #import "BMMediatorManager.h"
 #import "NSDictionary+Util.h"
 #import <WechatOpenSDK/WXApi.h>
