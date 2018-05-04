@@ -8,12 +8,12 @@
 #import "BMUmengModule.h"
 #import "BMShareModel.h"
 #import "YYModel.h"
-#import <UMShare/UMShare.h>
-#import <UMCommon/UMConfigure.h>
+#import <UMCShare/UMShare/UMShare.h>
+#import <UMCCommon/UMCommon/UMCommon.h>
 #import <WeexPluginLoader/WeexPluginLoader/WeexPluginLoader.h>
 #import "BMMediatorManager.h"
 #import "NSDictionary+Util.h"
-#import <WechatOpenSDK/WXApi.h>
+#import <WXApi.h>
 
 WX_PlUGIN_EXPORT_MODULE(bmWXShare, BMUmengModule)
 
