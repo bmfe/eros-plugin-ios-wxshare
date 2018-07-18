@@ -21,7 +21,7 @@
         _platform = BMSharePlatformType_WechatTimeLine;
     }
     
-    NSString *type = dic[@"type"];
+    NSString *type = dic[@"shareType"];
     if ([type isEqualToString:K_ShareTypeText]) {
         _shareType = BMShareTypeText;
     }

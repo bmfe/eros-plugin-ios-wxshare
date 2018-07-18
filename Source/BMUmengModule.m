@@ -17,6 +17,12 @@
 
 WX_PlUGIN_EXPORT_MODULE(bmWXShare, BMUmengModule)
 
+@interface BMUmengModule ()
+
+@property (nonatomic, assign) BOOL WXAppIsInstall;
+
+@end
+
 @implementation BMUmengModule
 
 @synthesize weexInstance;
@@ -30,7 +36,10 @@ WX_EXPORT_METHOD(@selector(authLogin:))
 /** 判断是否安装了微信 */
 -(BOOL)isInstallWXApp
 {
-    return [WXApi isWXAppInstalled];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        self.WXAppIsInstall = [WXApi isWXAppInstalled];
+    });
+    return self.WXAppIsInstall;
 }
 
 /** 初始化友盟方法 */
@@ -47,6 +56,10 @@ WX_EXPORT_METHOD(@selector(authLogin:))
                                           appKey:info[@"appKey"]
                                        appSecret:info[@"appSecret"]
                                      redirectURL:info[@"redirectURL"]];
+    
+    [WXApi registerApp:info[@"appKey"]];
+    
+    [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
 }
 
 /** 分享 */
