@@ -108,6 +108,11 @@ var bmWXShare = weex.requireModule('bmWXShare')
 	```
 
 ## Change Log
+**iOS 1.0.4** <br>
+1.再次修复获取是否安装微信方法无效的问题；
+
+**iOS 1.0.3** <br>
+1.修复获取是否安装微信方法无效的问题；
 
 **iOS 1.0.2** <br>
 1.修复shareType字段取值问题；

@@ -28,8 +28,8 @@ WX_PlUGIN_EXPORT_MODULE(bmWXShare, BMUmengModule)
 @synthesize weexInstance;
 
 WX_EXPORT_METHOD_SYNC(@selector(isInstallWXApp))
-WX_EXPORT_METHOD(@selector(initUM:))
-WX_EXPORT_METHOD(@selector(initWX:))
+WX_EXPORT_METHOD_SYNC(@selector(initUM:))
+WX_EXPORT_METHOD_SYNC(@selector(initWX:))
 WX_EXPORT_METHOD(@selector(share:successCallback:failedCallback:))
 WX_EXPORT_METHOD(@selector(authLogin:))
 
