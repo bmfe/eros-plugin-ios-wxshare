@@ -56,6 +56,7 @@ typedef NS_ENUM(NSInteger,BMShareType) {
 @property (nonatomic, copy) NSString *content;                  /**< 分享的文字内容 */
 @property (nonatomic, copy) NSString *url;                      /**< 分享web页面对应的地址 */
 @property (nonatomic, copy) NSString *path;                     /**< 分享小程序用到的页面路径 */
+@property (nonatomic, copy) NSString *userName;                 /**< 小程序名 */
 @property (nonatomic, assign) BMSharePlatformType platform;     /**< 分享的平台 */
 @property (nonatomic, assign) BMShareType shareType;            /**< 分享的类型 */
 

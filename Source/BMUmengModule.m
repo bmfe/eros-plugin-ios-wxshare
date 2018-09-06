@@ -130,6 +130,7 @@ WX_EXPORT_METHOD(@selector(authLogin:))
         UMShareMiniProgramObject *shareObject = [UMShareMiniProgramObject shareObjectWithTitle:shareTitle descr:shareText thumImage:shareImage];
         shareObject.webpageUrl = shareUrl;
         shareObject.path = model.path;
+        shareObject.userName = model.userName;
         messageObject.shareObject = shareObject;
     }
     //网页
